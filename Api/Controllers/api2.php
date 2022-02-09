@@ -18,7 +18,7 @@ if (!is_string($_GET["text"])){
 //Retrieve String
 $text=$_GET["text"];
 $palindrome=true;
-$result="";
+$result=false;
 
 //Left (start of string)
 $left=0;
@@ -37,13 +37,13 @@ while ($left <= $right) {
 
 //Change Result
 if($palindrome){
-    $result="Palindrome";
+    $result=true;
 }else{
-    $result="Not a Palindrome";
+    $result=false;
 }
 
 //Return json object of api result
-$json = array("text" => $text, "result" => $result);
+$json = array("text" => $text, "Palindrome" => $result);
 echo json_encode($json);
 
 ?>

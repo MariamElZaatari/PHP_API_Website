@@ -4,13 +4,13 @@
 // returns: Password Validation and Hashed
 
 //Missing Parameters
-if (!isset($_GET["text"])){
+if (!isset($_GET["pass"])){
     echo json_encode(array("status"=>400,"message"=>"Bad Request"));
     return false;
 }
 
 //Wrong Parameters
-if (!is_string($_GET["text"])){
+if (!is_string($_GET["pass"])){
     echo json_encode(array("status"=>400,"message"=>"Wrong Request"));
     return false;
 }
@@ -18,7 +18,7 @@ if (!is_string($_GET["text"])){
 //Retrieve and Hash String
 $password=$_GET["pass"];
 $hashed_password=hash('sha256', $password);
-$result="";
+$result=false;
 
 //Validate String Length and Content
 $valid_length=validateLength($password);
@@ -46,9 +46,9 @@ function validateContent($text){
 
 //Change Result
 if($valid_length && $valid_content){
-    $result="Valid";
+    $result=true;
 }else{
-    $result="Not Valid";
+    $result=false;
 }
 
 //Return json object of api result
