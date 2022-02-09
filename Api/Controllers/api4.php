@@ -35,7 +35,7 @@ if($valid_length && $valid_content){
     $result="Not Valid";
 }
 
-$json = array("password" => $hashed_password, "Validated" => $result);
+$json = array("password" => $hashed_password, "Valid" => $result);
 
 echo json_encode($json);
 ?>
