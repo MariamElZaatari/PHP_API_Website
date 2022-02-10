@@ -5,33 +5,44 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PHP and API Website</title>
+    <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Quicksand:wght@400;600;700&display=swap" rel="stylesheet">    
+    <link href="styles.css" rel="stylesheet">
 </head>
 <body>
+    <div class="heading">
+        <span>Testing My PHP & API Skills</span>
+    </div>
     <div class="container">
-        <div id="api1">
-            <span class="title"></span>
-            <input class="user_input" id="x"/>
-            <input class="user_input" id="y"/>
-            <button class="submit" id="btn1" onclick="api1()" >Submit</button>
-            <span class="result" id="result_api1"></span>
+        <div class="row">
+            <div class="box" id="api1">
+                <span class="title">Calculate 2 * X + Y % 2 </span>
+                <div>
+                    <input id="x" placeholder="X"/>
+                    <input id="y" placeholder="Y"/>
+                </div>
+                <button class="btn" id="btn1" onclick="api1()" >Submit</button>
+                <span class="result" id="result_api1"></span>
+            </div>
+            <div class="box" id="api2">
+                <span class="title">Check If Palindrome</span>
+                <input id="text_api2" placeholder="Palindrome"/>
+                <button class="btn" id="btn2" onclick="api2()">Submit</button>
+                <span class="result" id="result_api2"></span>
+            </div>
         </div>
-        <div id="api2">
-            <span class="title"></span>
-            <input class="user_input" id="text_api2"/>
-            <button class="submit" id="btn2" onclick="api2()">Submit</button>
-            <span class="result" id="result_api2"></span>
-        </div>
-        <div id="api3">
-            <span class="title"></span>
-            <input class="user_input" id="text_api3"/>
-            <button class="submit" id="btn3" onclick="api3()">Submit</button>
-            <span class="result" id="result_api3"></span>
-        </div>
-        <div id="api4">
-            <span class="title"></span>
-            <input class="user_input" id="pass" type="password"/>
-            <button class="submit" id="btn4" onclick="api4()">Submit</button>
-            <span class="result" id="result_api4"></span>
+        <div class="row">
+            <div class="box" id="api3">
+                <span class="title">Trim Blank Spaces</span>
+                <input id="text_api3" placeholder="Text"/>
+                <button class="btn" id="btn3" onclick="api3()">Submit</button>
+                <span class="result" id="result_api3"></span>
+            </div>
+            <div class="box" id="api4">
+                <span class="title">Valid Password</span>
+                <input id="pass" type="password" placeholder="Password"/>
+                <button class="btn" id="btn4" onclick="api4()">Submit</button>
+                <span class="result" id="result_api4"></span>
+            </div>
         </div>
     </div>
     <script src="index.js"></script>

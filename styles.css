@@ -1,0 +1,102 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height:100%;
+    font-family: 'Quicksand', serif;
+  }
+  .heading{
+      background-color: #0B0C10;
+      color:white;
+      font-family: 'Abril Fatface', cursive;
+      text-align: center;
+      padding-top: 20px;
+      padding-bottom: 20px;
+  }
+  .heading span{
+    font-size: 40px;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+  }
+  
+  .container{
+    display:flex;
+    flex-flow:column wrap;
+    height:90%;
+  }
+  .row{
+    display:flex;
+    flex-flow: row nowrap;
+    height:50%;
+  }
+  .box{
+    display:flex;
+    flex-flow:column nowrap;
+    justify-content: space-around;
+    align-items: center;
+    width: 49.84%;
+    background-color: #1f2833;
+    border:1px solid #45a29e;
+  }
+  .box div{
+    text-align: center;
+  }
+  .title{
+    color:#66fcf1;
+    font-size: 30px;
+    border-radius: 10px;
+    padding: 5px 40px 5px 40px;
+    text-align: center;
+    font-weight: 600;
+    text-transform: uppercase;
+  }
+  input{
+    background: transparent;
+    box-sizing: border-box;
+    border: none;
+    font-size: 15px;
+    padding: 5px;
+    border-bottom: 1px solid white;
+    color:white;
+    text-align: center;
+  }
+  .btn{
+    background: transparent;
+    border: 1px solid white;
+    padding: 15px 30px;
+    font-size: 20px;
+    color: white;
+    border-radius: 3px;
+  }
+  .btn:hover{
+    background:black;
+    color:#66fcf1;
+    border:none;
+  }
+  .btn:active{
+    background:#66fcf1;
+    color:black;
+    border:none;
+  }
+  .result{
+    font-size: 20px;
+    color: white;
+    font-weight:600;
+  }
+  @media only screen and (max-width: 768px) {
+    .container {
+      display: flex;
+      flex-flow: column wrap;
+      height: 100%;
+    }
+    .row {
+      display: flex;
+      flex-flow: column nowrap;
+      justify-content: start;
+      align-items: center;
+    }
+    .box{
+      width: 99.5%;
+      height:50%;
+    }
+  }
+  
