@@ -1,50 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PHP and API Website</title>
-    <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Cairo:wght@400;600;700&display=swap" rel="stylesheet">
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Cairo:wght@400;600;700&display=swap"
+        rel="stylesheet">
+    <!-- Styles -->
     <link href="styles.css" rel="stylesheet">
 </head>
+
 <body>
+    <!-- Heading Section -->
     <div class="heading">
         <span>Testing My PHP & API Skills</span>
     </div>
+    <!-- Container Section -->
     <div class="container">
+        <!-- Row 1 -->
         <div class="row">
+            <!-- Box 1 -->
             <div class="box" id="api1">
+                <!-- Each Box has Title, Input, Button, and Result -->
                 <span class="title">Calculate 2 * X + Y % 2 </span>
                 <div>
-                    <input id="x" placeholder="X"/>
-                    <input id="y" placeholder="Y"/>
+                    <input id="x" placeholder="X" />
+                    <input id="y" placeholder="Y" />
                 </div>
-                <button class="btn" id="btn1" onclick="api1()" >Submit</button>
+                <button class="btn" id="btn1" onclick="api1()">Submit</button>
                 <span class="result" id="result_api1"></span>
             </div>
+            <!-- Box 2 -->
             <div class="box" id="api2">
                 <span class="title">Check If Palindrome</span>
-                <input id="text_api2" placeholder="Palindrome"/>
+                <input id="text_api2" placeholder="Palindrome" />
                 <button class="btn" id="btn2" onclick="api2()">Submit</button>
                 <span class="result" id="result_api2"></span>
             </div>
         </div>
+        <!-- Row 2 -->
         <div class="row">
+            <!-- Box 1 -->
             <div class="box" id="api3">
-                <span class="title">Trim Blank Spaces</span>
-                <input id="text_api3" placeholder="Text"/>
+                <span class="title">Trim Blank Space</span>
+                <input id="text_api3" placeholder="Text" />
                 <button class="btn" id="btn3" onclick="api3()">Submit</button>
                 <span class="result" id="result_api3"></span>
             </div>
+            <!-- Box 2 -->
             <div class="box" id="api4">
-                <span class="title">Valid Password</span>
-                <input id="pass" type="password" placeholder="Password"/>
+                <span class="title">Validate Password</span>
+                <input id="pass" type="password" placeholder="Password" />
                 <button class="btn" id="btn4" onclick="api4()">Submit</button>
                 <span class="result" id="result_api4"></span>
             </div>
         </div>
     </div>
+    <!-- JS -->
     <script src="index.js"></script>
 </body>
+
 </html>
