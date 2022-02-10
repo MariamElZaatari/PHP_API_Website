@@ -6,7 +6,7 @@ function api1(){
     fetch(`Api/Router.php/api1?x=${x.value}&y=${y.value}`)
     .then(response => response.json())
     .then(data => {
-        result.innerText=data.result;
+        result.innerText=`Answer: ${data.result}`;
         x.value="";
         y.value="";
      }
@@ -21,9 +21,9 @@ function api2(){
     .then(response => response.json())
     .then(data=>{
         if(data.Palindrome){
-            result.innerText="Palindrome"
+            result.innerText=`${data.text} is a Palindrome`;
         }else{
-            result.innerText="Not a Palindrome"
+            result.innerText=`${data.text} is Not a Palindrome`;
         }
         text.value="";
     })
@@ -36,7 +36,7 @@ function api3(){
     fetch(`Api/Router.php/api3?text=${text.value}`)
     .then(response => response.json())
     .then(data=>{
-        result.innerText=data.trimmed;
+        result.innerText=`Trimmed Text: ${data.trimmed}`;
         text.value="";
     })
 }
@@ -54,7 +54,7 @@ function api4(){
         }else{
             result.innerText+=` Not Valid.`;
         }
-        result.innerText+=` Password: ${data.password}`
+        // result.innerText+=` Password: ${data.password}`
         pass.value="";
     })
 }

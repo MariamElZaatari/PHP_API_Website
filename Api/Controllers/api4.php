@@ -52,7 +52,7 @@ if($valid_length && $valid_content){
 }
 
 //Return json object of api result
-$json = array("password" => $hashed_password, "Valid" => $result);
+$json = array("password" => $hashed_password, "valid" => $result);
 echo json_encode($json);
 
 ?>
